@@ -16,4 +16,10 @@ describe('Tamagotchi') do
     pet = Tamagotchi.new("Bob")
     expect(pet.status).to(eq({"alive" => true, "health" => 10, "rest" => 10, "happiness" => 10}))
   end
+
+  it "knows Tamagotchi is dead when any stat reaches 0" do
+    pet = Tamagotchi.new("Bob")
+    pet.decrease_stat("health", 10)
+    expect(pet.status).to(eq({"alive" => false, "health" => 0, "rest" => 10, "happiness" => 10}))
+  end
 end
