@@ -44,9 +44,23 @@ describe('Tamagotchi') do
     expect(pet.status).to(eq({"alive" => true, "health" => 10, "rest" => 10, "happiness" => 10}))
   end
 
-  it "removes 1 point from each stat every 10 seconds" do
+  it "sets [time unit] to 1 hour for normal mode, 1 minute for fast mode, and 1 second for nightmare mode" do
     pet = Tamagotchi.new("Bob")
-    sleep(15)
+    pet.mode("nightmare")
+    expect(pet.time_unit).to(eq(1))
+  end
+
+  it "defaults to normal mode" do
+    pet = Tamagotchi.new("Bob")
+    expect(pet.time_unit).to(eq(3600))
+  end
+
+  it "removes 1 point from each stat every time unit" do
+    pet = Tamagotchi.new("Bob")
+    pet.mode("nightmare")
+    sleep(1)
     expect(pet.status).to(eq({"alive" => true, "health" => 9, "rest" => 9, "happiness" => 9}))
+    sleep(9)
+    expect(pet.status).to(eq({"alive" => false, "health" => 0, "rest" => 0, "happiness" => 0}))
   end
 end

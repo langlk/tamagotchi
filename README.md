@@ -32,6 +32,11 @@ _A Ruby Script_
 * Program raises Tamagotchi's happiness by 5 when Tamagotchi plays.
   * Example input: pet.happiness = 5, pet.play
   * Example output: pet.happiness = 10
+* Program sets [time unit] to 1 hour for normal mode, 1 minute for fast mode, and 1 second for nightmare mode.
+  * Example input: pet.mode("fast")
+  * Example output: pet.time_unit = 60s
+* Program defaults to normal mode.
+  * Example output: pet.time_unit = 3600s
 * Program removes 1 health, rest, and happiness for each [time unit] that passes.
   * Example input: pet.health = 10, pet.rest = 10, pet.happiness = 10, 3 [time units] go by
   * Example output: pet.health = 7, pet.rest = 7, pet.happiness = 7
