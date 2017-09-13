@@ -19,7 +19,10 @@ _A Ruby Script_
   * Example output: pet.name = "Bob" pet.health = 10, pet.rest = 10, pet.happiness = 10
 * Program reports Tamagotchi's status.
   * Example input: pet.status
-  * Example output: {health => 10, pet.rest => 10, pet.happiness => 10}
+  * Example output: {alive => true, health => 10, rest => 10, happiness => 10}
+* Program knows Tamagotchi is dead when any stat reaches 0.
+  * Example input: pet.health = 7, pet.rest = 7, pet.happiness = 0
+  * Example output: {alive => false, health => 10, rest => 10, happiness => 0}
 * Program raises Tamagotchi's health by 5 when Tamagotchi is fed.
   * Example input: pet.health = 5, pet.feed
   * Example output: pet.health = 10
@@ -32,10 +35,8 @@ _A Ruby Script_
 * Program removes 1 health, rest, and happiness for each [time unit] that passes.
   * Example input: pet.health = 10, pet.rest = 10, pet.happiness = 10, 3 [time units] go by
   * Example output: pet.health = 7, pet.rest = 7, pet.happiness = 7
-* Program knows Tamagotchi is dead when any stat reaches 0.
-  * Example input: pet.health = 7, pet.rest = 7, pet.happiness = 0
-  * Example output: "Your Tamagotchi has died."
-  
+
+
 ## Support and contact details
 
 _Please contact [kels.langlois@gmail.com](mailto:kels.langlois@gmail.com) with questions, comments, or issues._
