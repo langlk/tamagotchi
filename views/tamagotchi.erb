@@ -1,0 +1,23 @@
+<h1>Your Tamagotchi is <%=@pet.name%></h1>
+
+<div class="message">
+  <%= @info %>
+</div>
+
+<div class="actions">
+  <form action="/tamagotchi/check" method="post">
+    <button type="submit" class="btn">Check</button>
+  </form>
+
+  <form action="/tamagotchi/feed" method="post">
+    <button type="submit" class="btn">Feed</button>
+  </form>
+
+  <form action="/tamagotchi/nap" method="post">
+    <button type="submit" class="btn">Nap</button>
+  </form>
+
+  <form action="/tamagotchi/play" method="post">
+    <button type="submit" class="btn">Play</button>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<h1>Hatch your Tamagotchi!</h1>
+
+<form  action="/tamagotchi" method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="game-mode">Mode</label>
+    <select class="form-control" name="game-mode">
+      <option value="normal">Normal</option>
+      <option value="fast">Fast</option>
+      <option value="nightmare">Nightmare</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Hatch!</button>
+</form>
