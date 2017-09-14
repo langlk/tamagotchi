@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 class Tamagotchi
-  attr_reader :health, :rest, :happiness, :name, :time_unit
+  attr_reader :name, :time_unit
   def initialize(name)
     @name = name
     @health = 10
