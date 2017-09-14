@@ -1,12 +1,12 @@
 # Tamagotchi
 
-#### _Project in Ruby_
+#### _Epicodus Practice in Ruby, September 13, 2017_
 
 #### By Kelsey Langlois & Mitch Long
 
 ## Description
 
-_A Ruby Script_
+_A Ruby/Sinatra web app that allows a user to take care of a Tamagotchi._
 
 ## Setup/Installation Requirements
 
@@ -49,6 +49,7 @@ _Please contact [kels.langlois@gmail.com](mailto:kels.langlois@gmail.com) with q
 ## Technologies Used
 
 * Ruby
+* Sinatra
 
 ### License
 
