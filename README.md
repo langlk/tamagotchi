@@ -11,6 +11,9 @@ _A Ruby/Sinatra web app that allows a user to take care of a Tamagotchi._
 ## Setup/Installation Requirements
 
 * Clone this repository
+* Run ```bundle install``` in the project root.
+* Run ```ruby app.rb```
+* Open ```localhost:4567``` in your web browser
 
 ## Specifications
 
